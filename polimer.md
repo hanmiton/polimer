@@ -10,3 +10,14 @@ web component son una nueva tecnologia, adoptad paultainament por todo slo naveg
 -HTML Imports
 	Es un mecanismo para empaquetas template script css3 y se lo linkead como cualquier otra cosa
 	(modularizacion)
+@import cuadno se importa un elemtno completo personalizado
+
+BOWER
+ es un administrador de paquetes
+ instalacion
+ 	npm install bower
+ iniciando un nuevo poreycto de bower
+ 	bower init
+libreria para hacer qeu web component sea util en cualqueir navegador
+	bower install webcomponentjs --save
+
