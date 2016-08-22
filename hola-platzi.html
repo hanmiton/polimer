@@ -1,0 +1,67 @@
+<!--priemr ocmponent con plain.js-->
+<template><!--eiqueta que ayuda a la creacion de web components-->
+	<p>
+		HOla, <strong></strong>
+	</p>	
+</template>
+<script type="text/javascript">
+	(function(window, document){//funcion autoinvocable que se ejecuta cuando el script carga//funcion que llaama a window sy adocuemt html
+		var documentoImportador = document,//en donde se van a importar los components
+			documentAImportar = (documentoImportador._currentScript || documentoImportador._currentScript.ownerdocument),
+			template = documentoAImportar.querySelector('template').//query selecto q busca po run elemento tempalte
+			content,
+			portotipoDeMiElemento = Object.create(HTMLElement.prototype);//creando un leemnto de html
+			portotipoDeMiElemento.who = 'Platzi';//creadno attr who
+
+			//clalback del ciclo de vida
+			portotipoDeMiElemento.createCallback = function(){
+				clone = documentoImportador.importNode(template,true);//importanto un nodo tempalte
+				shadowRoot.appendChild(clone);
+				this.strong = shadowRoot.querySelector('strong');
+
+				//creando compoortameinto
+				if (this.hasAttribute('who')){//pregunta si teine un atributo who
+					var who = this.getAttribute('who');
+					this.setWho(this.who);
+				}else{
+					this.setWho(this.who)
+				}
+			};
+
+			portotipoDeMiElemento.attributeChangedCallback = function(attr,oldValue,newValue){
+				if(attr=== 'who')
+					this.setWho(newValue);
+			}
+			portotipoDeMiElemento.setWho = function(value){
+				this.who = val;
+				this.strong.textContent = this.who;
+			}
+
+			window.miElemento = documentoImportador.registerElement('hola-platzi',{prototype: portotipoDeMiElementor //registrando dicho elemetno en windows para poder ser usando
+
+			})
+	})();
+</script>
+
+<!--creando webcomponent con polymer-->
+<link rel="import"  href="../polymer/polymer.html"><!--importando archivo base-->
+<dom-module id ="hola-platzi-polymer">
+	<template>
+		<p>
+			Hola, <strong> {{who}} </strong> <!--usando propiedad who de web ocmponente-->
+		</p>
+	</template>
+</dom-module>
+<!--binding para que las vistas sean dinamicas -->
+<script type="text/javascript">
+	Polymer({//funcion que se lo pasa 2 ocas como se registra el elemtno y las properties de dicho web component
+		is: 'hola-platzi-polymer',//como se va registarr dicho web compoent
+		properties: {//properties que es un objeto que va tener el web component
+			who:{
+				type: String,
+				value: 'Platzi'
+			}
+		}
+	});
+	//Script del componente 
+</script>

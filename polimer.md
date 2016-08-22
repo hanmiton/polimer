@@ -20,4 +20,15 @@ BOWER
  	bower init
 libreria para hacer qeu web component sea util en cualqueir navegador
 	bower install webcomponentjs --save
+polimer es una libreria para web components
+instalando polimer con bower
+	ssbower install --save polymer#1.0.0
+cuadno haya problemas q no carge ele web compoente puede ser que se quedo grabado en las cookies por lo que es mejor eliminar las cookies
 
+Preguntas
+ core elements ahora son iron elemnts
+ventajas de web componetes
+	legibilidad
+	sea reutilizable (modular)
+//directiva de angular
+	necesitan de angular un web componente de polymer corre en el DOM 
