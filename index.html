@@ -23,4 +23,19 @@
 <body>
 	<hola-platxi-polymer who = "Platzi, des polymer"></hola-platxi-polymer><!--usando componente-->
 </body>
+<iron-ajaz
+	auto
+	url= "https://api.mercadolibre.com/sites/MLM/search?q=oferta"
+	hanlde-as = 'json'
+	last-reponse = '{{data}}'
+	debounce-duration = '300'>
+<iron-ajaz>
+<template is = "dom-repeat" items = '{{data.results}}'>
+	<producto-individual item= "{{item}}"></producto-individual>
+</template>
 </html>
+
+<paper-fab></paper-fab> <!--boton circular de matiral design-->
+<!--no tiene href por default-->
+<!--behaviors -->
+Importante estudiar components
