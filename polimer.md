@@ -111,16 +111,21 @@ defaulo-cache estrategy="networkFirst"
 </script>
 <h1 is = "super-h1">Super h1</h1>
 
-falldas 
-cuales son las estrategis mas comuner par ale uncionamiento de app offline
- -cache only, network first, network only
- Donde se deben regristra los atribuotos presonlaizado spara nuestro web compoennt
- - behairvors
- Los hatml templates son instanciados
+falladas
+Para que sirve el shadow DOM
+	nivelar nagedaores
+Los hatml templates son instanciados
  - automaticamente por el DOM
- Cuales son los generadores d eproyecto spolymer oficiales disponibles
+  -por el navegador 
+Cuales son los generadores d eproyecto spolymer oficiales disponibles
  -kit, ligth
- cual es el pseduo-selecto mediante el cual podermo modificar los estilos default de los web componentes preinstlador por poymer starter kit
- -host
  cual es la forma corercta deañdir ocmporntamiento inherentes a un web component
- -.......
+ -behavior
+ -atributos personalizados
+Correctas
+cuales son las estrategis mas comuner par ale uncionamiento de app offline
+ :cache only, cacheFirst, networkfirst
+ donde se deben registarr los atributos personalizados para nuestros web componetes
+ 
+ cual es el pseduo-selecto mediante el cual podermo modificar los estilos default de los web componentes preinstlador por poymer starter kit
+ :root
